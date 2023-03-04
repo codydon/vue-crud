@@ -7,6 +7,12 @@
     <title>vue crud</title>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <style>
+        body {
+            background: #eee;
+            max-width: 960px;
+            margin: 20px auto;
+        }
+
         .box {
             display: inline-block;
             padding: 100px 0;
@@ -16,6 +22,16 @@
             margin: 20px;
             display: inline-block;
         }
+li{
+    padding:20px;
+    border-radius: 20px;
+}
+        li.fav{
+            background:#21bea985;
+            color: white ;
+        }
+
+        
     </style>
 </head>
 
@@ -42,8 +58,9 @@
         <!-- <button v-if="!showBooks" @click="toggleShowBooks"> show</button> -->
         <button v-else @click="toggleShowBooks"> show</button>
 
+        <!-- // -->
         <div v-show="showBooks">
-            v-show
+            v-show displays only when the v-show property is true
         </div>
         <hr />
         <!-- mouse events -->
@@ -64,7 +81,7 @@
         <hr>
         <h3>lists v-for</h3>
         <ul>
-            <li v-for="book in books">
+            <li v-for="book in books" :class="{ fav:book.isFav}">
                 <img :src="book.img" :alt="book.title" height="250" width="350">
 
                 <h4>{{ book.title}}</h4>
@@ -77,6 +94,7 @@
         <!-- <a v-bind:href="url">Find pictures for your project here</a> -->
         <a :href="url">Find pictures for your project here</a>
         <hr>
+
         <hr>
     </div>
 

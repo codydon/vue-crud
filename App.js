@@ -12,10 +12,10 @@ const app = Vue.createApp({
             x: 0,
             y: 0,
             books : [
-                { author: 'J.K. Rowling', title: 'Harry Potter and the Philosopher\'s Stone', img: 'assets/1.png' },
-                { author: 'Harper Lee', title: 'To Kill a Mockingbird', img: 'assets/2.png' },
-                { author: 'J.R.R. Tolkien', title: 'The Lord of the Rings', img: 'assets/3.png' },
-              ]
+                { author: 'J.K. Rowling', title: 'Harry Potter and the Philosopher\'s Stone', img: 'assets/1.png', isFav:true},
+                { author: 'Harper Lee', title: 'To Kill a Mockingbird', img: 'assets/2.png', isFav:false},
+                { author: 'J.R.R. Tolkien', title: 'The Lord of the Rings', img: 'assets/3.png', isFav:true}
+             ]
             
         }
     },
