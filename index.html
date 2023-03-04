@@ -24,6 +24,7 @@
         }
 li{
     padding:20px;
+    margin:5px;
     border-radius: 20px;
 }
         li.fav{
@@ -81,7 +82,7 @@ li{
         <hr>
         <h3>lists v-for</h3>
         <ul>
-            <li v-for="book in books" :class="{ fav:book.isFav}">
+            <li v-for="book in books" :class="{ fav:book.isFav}" @click="toggleFav(book)">
                 <img :src="book.img" :alt="book.title" height="250" width="350">
 
                 <h4>{{ book.title}}</h4>
