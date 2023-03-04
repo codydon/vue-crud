@@ -6,6 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>vue crud</title>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <style>
+        .box{
+            padding: 100px 0;
+            width: 400px;
+            text-align:center;
+            background: #ddd;
+            margin:200px;
+            display:inline-block;
+        }
+    </style>
 </head>
 
 <body>
@@ -16,6 +26,7 @@
         <p>{{title}} - {{author}} - {{age}}</p>
         <button v-on:click="age++">Increase age</button>
         <button v-on:click="age--">Decrease age</button>
+        <!-- //you can use @ inplace of v-on -->
         <!-- <div @click="title = 'something else' ">change book title</div> -->
         <div @click="changeTitle('Things Fall Apart')">change book title</div>
         <hr />
@@ -34,6 +45,12 @@
             v-show
         </div>
         <hr />
+        <!-- mouse events -->
+        <h4>mouse events</h4>
+        <div class="box" @mouseover="handleEvent($event, 5)">Mouseover</div>
+        <div class="box" @mouseleave="handleEvent">Mouse Leave</div>
+        <div class="box" @dblclick ="handleEvent">Double click</div>
+        <div class="box" @mousemove="handleMousemove">Mouse pos X - {{x}} , pos Y - {{y}}</div>
     </div>
 
     <script src="App.js"></script>
