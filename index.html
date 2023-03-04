@@ -7,13 +7,14 @@
     <title>vue crud</title>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <style>
-        .box{
+        .box {
+            display: inline-block;
             padding: 100px 0;
             width: 400px;
-            text-align:center;
+            text-align: center;
             background: #ddd;
-            margin:200px;
-            display:inline-block;
+            margin: 20px;
+            display: inline-block;
         }
     </style>
 </head>
@@ -30,7 +31,7 @@
         <!-- <div @click="title = 'something else' ">change book title</div> -->
         <div @click="changeTitle('Things Fall Apart')">change book title</div>
         <hr />
-        <h4>conditional rendering</h4>
+        <h4>conditional rendering v-if v-else</h4>
         <!-- v-if="true/false" -->
         <div v-if="showBooks">
             v-if <br>
@@ -41,16 +42,31 @@
         <!-- <button v-if="!showBooks" @click="toggleShowBooks"> show</button> -->
         <button v-else @click="toggleShowBooks"> show</button>
 
-        <div v-show="showBooks" >
+        <div v-show="showBooks">
             v-show
         </div>
         <hr />
         <!-- mouse events -->
         <h4>mouse events</h4>
-        <div class="box" @mouseover="handleEvent($event, 5)">Mouseover</div>
-        <div class="box" @mouseleave="handleEvent">Mouse Leave</div>
-        <div class="box" @dblclick ="handleEvent">Double click</div>
-        <div class="box" @mousemove="handleMousemove">Mouse pos X - {{x}} , pos Y - {{y}}</div>
+        <div class="box" @mouseover="handleEvent($event, 5)">
+            <p>Mouseover</p>
+            <i>open console for output</i>
+        </div>
+        <div class="box" @mouseleave="handleEvent">
+            <p>Mouse Leave</p>
+            <i>open console for output</i>
+        </div>
+        <div class="box" @dblclick="handleEvent">
+            <p>Double click</p>
+            <i>open console for output</i>
+    </div>
+    <div class="box" @mousemove="handleMousemove">Mouse pos X - {{x}} , pos Y - {{y}}</div>
+    <hr>
+    <h4>lists v-for</h4>
+
+    <hr>
+    <hr>
+    <hr>
     </div>
 
     <script src="App.js"></script>
