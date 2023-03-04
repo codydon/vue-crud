@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <h1>vue CRUD</h1>
+    <h1>vue ref</h1>
     <!-- template -->
     <div id="app">
         <h4>POSTS</h4>
@@ -18,7 +18,22 @@
         <button v-on:click="age--">Decrease age</button>
         <!-- <div @click="title = 'something else' ">change book title</div> -->
         <div @click="changeTitle('Things Fall Apart')">change book title</div>
-        
+        <hr />
+        <h4>conditional rendering</h4>
+        <!-- v-if="true/false" -->
+        <div v-if="showBooks">
+            v-if <br>
+            true == show <br>
+            false == hide
+        </div>
+        <button v-if="showBooks" @click="toggleShowBooks"> show</button>
+        <!-- <button v-if="!showBooks" @click="toggleShowBooks"> show</button> -->
+        <button v-else @click="toggleShowBooks"> show</button>
+
+        <div v-show="showBooks" >
+            v-show
+        </div>
+        <hr />
     </div>
 
     <script src="App.js"></script>
