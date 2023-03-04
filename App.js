@@ -9,7 +9,15 @@ const app = Vue.createApp({
             author: 'James Clear',
             age: 52,
             x: 0,
-            y: 0
+            y: 0,
+            books : [
+                { author: 'J.K. Rowling', title: 'Harry Potter and the Philosopher\'s Stone' },
+                { author: 'Harper Lee', title: 'To Kill a Mockingbird' },
+                { author: 'George Orwell', title: '1984' },
+                { author: 'J.R.R. Tolkien', title: 'The Lord of the Rings' },
+                { author: 'Markus Zusak', title: 'The Book Thief' }
+              ]
+            
         }
     },
 

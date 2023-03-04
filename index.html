@@ -63,7 +63,12 @@
     <div class="box" @mousemove="handleMousemove">Mouse pos X - {{x}} , pos Y - {{y}}</div>
     <hr>
     <h4>lists v-for</h4>
-
+        <ul>
+            <li v-for="book in books" >
+                <h4>{{ book.title}}</h4>
+                <p>Author - {{ book.author}}</p>
+            </li>
+        </ul>
     <hr>
     <hr>
     <hr>
