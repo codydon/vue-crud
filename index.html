@@ -23,7 +23,7 @@
     <h1>vue ref</h1>
     <!-- template -->
     <div id="app">
-        <h4>POSTS</h4>
+        <h3>POSTS</h3>
         <p>{{title}} - {{author}} - {{age}}</p>
         <button v-on:click="age++">Increase age</button>
         <button v-on:click="age--">Decrease age</button>
@@ -31,7 +31,7 @@
         <!-- <div @click="title = 'something else' ">change book title</div> -->
         <div @click="changeTitle('Things Fall Apart')">change book title</div>
         <hr />
-        <h4>conditional rendering v-if v-else</h4>
+        <h3>conditional rendering v-if v-else</h3>
         <!-- v-if="true/false" -->
         <div v-if="showBooks">
             v-if <br>
@@ -47,7 +47,7 @@
         </div>
         <hr />
         <!-- mouse events -->
-        <h4>mouse events</h4>
+        <h3>mouse events</h3>
         <div class="box" @mouseover="handleEvent($event, 5)">
             <p>Mouseover</p>
             <i>open console for output</i>
@@ -59,19 +59,25 @@
         <div class="box" @dblclick="handleEvent">
             <p>Double click</p>
             <i>open console for output</i>
-    </div>
-    <div class="box" @mousemove="handleMousemove">Mouse pos X - {{x}} , pos Y - {{y}}</div>
-    <hr>
-    <h4>lists v-for</h4>
+        </div>
+        <div class="box" @mousemove="handleMousemove">Mouse pos X - {{x}} , pos Y - {{y}}</div>
+        <hr>
+        <h3>lists v-for</h3>
         <ul>
-            <li v-for="book in books" >
+            <li v-for="book in books">
+                <img :src="book.img" :alt="book.title" height="250" width="350">
+
                 <h4>{{ book.title}}</h4>
                 <p>Author - {{ book.author}}</p>
             </li>
         </ul>
-    <hr>
-    <hr>
-    <hr>
+        <hr>
+        <!-- attribute binding -->
+        <h3>attribute binding v-bind OR : </h3>
+        <!-- <a v-bind:href="url">Find pictures for your project here</a> -->
+        <a :href="url">Find pictures for your project here</a>
+        <hr>
+        <hr>
     </div>
 
     <script src="App.js"></script>

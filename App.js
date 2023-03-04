@@ -4,6 +4,7 @@ const app = Vue.createApp({
     // template: '<h2> I am the template </h2>'
     data() {
         return {
+            url:'www.unsplash.com',
             showBooks: true,
             title: 'Atomic habits',
             author: 'James Clear',
@@ -11,11 +12,9 @@ const app = Vue.createApp({
             x: 0,
             y: 0,
             books : [
-                { author: 'J.K. Rowling', title: 'Harry Potter and the Philosopher\'s Stone' },
-                { author: 'Harper Lee', title: 'To Kill a Mockingbird' },
-                { author: 'George Orwell', title: '1984' },
-                { author: 'J.R.R. Tolkien', title: 'The Lord of the Rings' },
-                { author: 'Markus Zusak', title: 'The Book Thief' }
+                { author: 'J.K. Rowling', title: 'Harry Potter and the Philosopher\'s Stone', img: 'assets/1.png' },
+                { author: 'Harper Lee', title: 'To Kill a Mockingbird', img: 'assets/2.png' },
+                { author: 'J.R.R. Tolkien', title: 'The Lord of the Rings', img: 'assets/3.png' },
               ]
             
         }
